@@ -40,16 +40,32 @@ public class KasirSederhana {
             namaTiket = input.next();
 
             switch (namaTiket.toLowerCase()) {
+                case "spiderman : No way home":
+                case "spiderman : no Way home":
+                case "spiderman : no way Home":
+                case "spiderman : no way home":
+                case "Spiderman : No Way Home":
                 case "spiderman":
                 case "Spiderman":
                     harga = 40000;
                     namaTiket = "Spiderman : No Way Home";
                     break;
+                case "venom : the last Dance":    
+                case "venom : the Last dance":    
+                case "venom : The last dance":
+                case "venom : the last dance":
+                case "Venom : the last dance":
+                case "Venom : The Last Dance":
                 case "venom":
                 case "Venom":
                     harga = 50000;
                     namaTiket = "Venom : The Last Dance";
                     break;
+                case "avangers : end Game":
+                case "avangers : End game":
+                case "Avangers : end game":
+                case "avangers : end game":
+                case "Avangers : End Game":    
                 case "avangers":
                 case "Avangers":
                     harga = 60000;
@@ -150,10 +166,12 @@ public class KasirSederhana {
             kembalian = 0;
         }
 
+        // Ambil tanggal & waktu transaksi
         LocalDateTime waktuSekarang = LocalDateTime.now();
         DateTimeFormatter formatWaktu = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy | HH:mm:ss");
         DateTimeFormatter formatID = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
+        // 
         String idTransaksi = "#TRX" + waktuSekarang.format(formatID);
 
         System.out.println("\n===========================================");
@@ -189,9 +207,3 @@ public class KasirSederhana {
         input.close();
     }
 }
-
-
-
-
-
-
